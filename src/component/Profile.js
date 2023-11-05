@@ -1,13 +1,11 @@
 import React, { useEffect } from 'react'
 import Header from './Header'
-import axios from 'axios'
 import './loading.css'
 import { useDispatch, useSelector } from 'react-redux'
 import { PostList } from '../redux/post/action'
 import {Link} from 'react-router-dom'
 
 const Profile = () => {
-    const [data,setData] = React.useState([]);
     const {post} = useSelector(state => state.post);
     const dispatch = useDispatch();
 

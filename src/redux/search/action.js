@@ -64,7 +64,7 @@ export const deletebyId = (id,title) =>{
         axios.get(`http://localhost:8080/post/delete/${title}/${id}`)
         .then((res)=>{
             const result = res.data.result;
-            console.log(result," acdjklsd")
+            // console.log(result," acdjklsd")
             dispatch(delsucc(result));
         }).catch((err)=>{
             dispatch(delfail(err))

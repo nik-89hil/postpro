@@ -14,7 +14,6 @@ const Delete = () => {
     
 
     const deletepost = ()=>{
-        console.log(params,">>>");
         const id = params.id;
         const title = params.topic;
         dispatch(deletebyId(id,title));

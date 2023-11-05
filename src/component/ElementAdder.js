@@ -13,8 +13,6 @@ const ElementAdder = () => {
     const handleErrors = (errors) => { };
 
     const sendData = (data) => {
-        
-        console.log(data,":--")
 
         axios.post("http://localhost:8080/post/createpost", {
             ...data,
@@ -56,10 +54,6 @@ const ElementAdder = () => {
                     Title : <br />
                     <textarea type="text" name='title' rows={5} cols={100} {...register('title', registerOptions.intro)}/>
                 </h1>
-                {/* <h1>
-                    images : <br />
-                    <input type='file' multiple  name="files"  {...register('files')} />
-                </h1> */}
             
                 <h1>
                     Introduction : <br />

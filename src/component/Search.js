@@ -2,7 +2,6 @@ import React, { useEffect } from 'react'
 import Header from './Header'
 import './header.css'
 import { useDispatch, useSelector } from 'react-redux';
-import {account_creater} from '../redux/user/actionuser';
 import { useForm, } from 'react-hook-form'
 import Loading from './Loading';
 import {Link} from 'react-router-dom'
@@ -12,15 +11,13 @@ const Search = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
     const dispatch  = useDispatch();
     const [fors ,setFors] = React.useState(""); 
-    const email = localStorage.getItem("email");
-    const post = useSelector(state => state.post);
     const result = useSelector(state => state.search);
 
 
 
     const search = (data) =>{
         setFors(data.text)
-        console.log(fors,"search")
+        // console.log(fors,"search")
         
     }
 

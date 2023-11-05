@@ -9,8 +9,6 @@ const Header = () => {
   const [box,setBox] = React.useState(false);
   const {user} = useSelector(state=>state.user);
  
-  
-//  console.log(user,"---state 23")
 
 
   return (
@@ -40,9 +38,7 @@ const Header = () => {
     {
       box?(
         <div className='user-features'>
-      {/* <p><NavLink to={"/"}><i className="fa-solid fa-house"></i> Home</NavLink></p> */}
      
-      
       {
         user.length > 0 && user[0].isAdmin?(
           <div>

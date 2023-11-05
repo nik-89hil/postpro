@@ -32,7 +32,7 @@ export const accountholder = (data) =>{
             ...data
         }).then((res)=>{
             const ans = res.data;
-            console.log(ans ,"---2")
+            // console.log(ans ,"---2")
             localStorage.setItem("user",JSON.stringify(ans));
             dispatch(usersucc(ans));
         }).catch((err)=>{

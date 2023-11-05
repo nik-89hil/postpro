@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import Header from './Header.js'
 import { useDispatch,useSelector} from "react-redux"
 import './header.css'
-import { Link,NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import {PostList} from '../redux/post/action.js'
 import Loading from './Loading.js'
 import Fotter from './Fotter.js'
@@ -14,11 +14,6 @@ const Post = () => {
     useEffect(()=>{
         dispatch(PostList())
     },[]);
-
-    const array = ["mongodb","react","html","css","npm","mongodb","react","html","css","npm",]
-
-    // console.log(post,loading,err,"====")
-
 
     
   return (

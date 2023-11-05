@@ -1,8 +1,7 @@
 import React from 'react'
 import Header from './Header'
 import ElementAdder from './ElementAdder'
-// import axios from "axios"
-// import { useForm, } from 'react-hook-form'
+
 
 
 const CreatePost = () => {

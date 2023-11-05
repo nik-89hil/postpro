@@ -2,7 +2,7 @@ import React from 'react'
 import './log.css'
 import { useForm, } from 'react-hook-form'
 import {useDispatch, useSelector} from 'react-redux'
-import {Link, useNavigate} from 'react-router-dom'
+import { useNavigate} from 'react-router-dom'
 import { accountholder } from '../redux/user/actionuser'
 import Loading from './Loading';
 import logo from "./logoph.jpg";

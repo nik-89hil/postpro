@@ -4,7 +4,7 @@ import { Link, useParams } from 'react-router-dom'
 import Header from './Header';
 import { useDispatch, useSelector } from 'react-redux';
 import Fotter from './Fotter'
-import {detail,PostList} from '../redux/post/action'
+import {detail} from '../redux/post/action'
 import Slider from './Slider';
 
 

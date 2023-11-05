@@ -35,35 +35,6 @@ export const postReducer = (state = intialstate , action) =>{
 }
 
 
-// const intialvaluesearch={
-//     loading:true,
-//     search:[],
-//     err:""
-// }
-
-// export const searchReducer = (state = intialvaluesearch , action) =>{
-//     switch(action.type){
-//         case SEARCH_REQ :
-//             return {
-//                 ...state,
-//                 loading : true
-//             }
-//         case SEARCH_SUCCESS :
-//             return {
-//                 ...state,
-//                 loading :false,
-//                 search:action.payload
-//             }
-//         case SEARCH_FAIL :
-//             return{
-//                 ...state,
-//                 loading:true,
-//                 err:action.payload
-//             }
-//         default : return state
-//     }
-
-// }
 
 const detailinitial = {
     details:[],

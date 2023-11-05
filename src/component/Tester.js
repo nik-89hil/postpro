@@ -5,12 +5,6 @@ import { useNavigate } from 'react-router-dom'
 const Tester = () => {
   const navigate = useNavigate();
 
-  // const postFile = async(file) =>{
-  //   const formdata = new FormData();
-  //   formdata.append('file',file)
-  //   const result = await axios.post("http://localhost:8080/post/image",formdata)
-  //   console.log(result,"_____ server side")
-  // }
   
 
   const postMultiFile = async(filelist) =>{

@@ -38,7 +38,7 @@ export const PostList = () =>{
         axios.get("http://localhost:8080/post/")
         .then((res)=>{
             const list = res.data;
-            console.log(list,"_____ seerver root")
+            // console.log(list,"_____ seerver root")
             dispatch(rootsucc(list.root))
             dispatch(successpost(list.result));
         

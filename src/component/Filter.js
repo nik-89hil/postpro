@@ -10,14 +10,12 @@ import "./loading.css"
 const Filter = () => {
     const params = useParams();
     const dispatch = useDispatch();
-    console.log(params.relatedtopic);
     const {search,loading,err} = useSelector(state => state.search)
 
     useEffect(()=>{
         dispatch(searcher(params.relatedtopic))
     },[])
 
-    console.log(search,"888")
 
 
   return (
