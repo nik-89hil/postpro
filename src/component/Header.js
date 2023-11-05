@@ -1,6 +1,6 @@
 import React, {  } from 'react'
 import './header.css'
-import {Link, NavLink, useNavigate} from "react-router-dom"
+import {Link, NavLink, } from "react-router-dom"
 import { useSelector } from 'react-redux'
 import logo from "./logoph.jpg";
 

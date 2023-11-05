@@ -28,7 +28,7 @@ export const accountholder = (data) =>{
         dispatch(userreq());
         // console.log(data,"---1")
 
-        axios.post('http://localhost:8080/user/login',{
+        axios.post('https://widepost-api.onrender.com/user/login',{
             ...data
         }).then((res)=>{
             const ans = res.data;

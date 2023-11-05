@@ -35,7 +35,7 @@ export const PostList = () =>{
     return(dispatch) =>{
         dispatch(fetchpost);
 
-        axios.get("http://localhost:8080/post/")
+        axios.get("https://widepost-api.onrender.com/post/")
         .then((res)=>{
             const list = res.data;
             // console.log(list,"_____ seerver root")
@@ -64,7 +64,7 @@ const detailsucc = (data) =>{
 
 export const detail = ()=>{
     return(dispatch)=>{
-        axios.get("http://localhost:8080/post")
+        axios.get("https://widepost-api.onrender.com/post")
         .then((res)=> {
             const post = res.data.result;
             const find = localStorage.getItem("getid");

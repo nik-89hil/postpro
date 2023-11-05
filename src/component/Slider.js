@@ -17,7 +17,7 @@ const Slider = ({ images }) => {
     <>
      <div className="image-slider">
       <div className="slider-container">
-        <img draggable="false" src={`http://localhost:8080/getimage/${images[currentImageIndex]}`} alt={`Image ${currentImageIndex}`} />
+        <img draggable="false" src={`https://widepost-api.onrender.com/getimage/${images[currentImageIndex]}`} alt={`Image ${currentImageIndex}`} />
       </div>
       <div className="slider-controls">
         <button onClick={prevImage}>Previous</button>

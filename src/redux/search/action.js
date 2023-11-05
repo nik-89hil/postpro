@@ -26,10 +26,10 @@ export const searcher = (query) =>{
     return(dispatch)=>{
         dispatch(seareq());
 
-        axios.get(`http://localhost:8080/post/topic/${query}`)
+        axios.get(`https://widepost-api.onrender.com/post/topic/${query}`)
         .then((res)=>{
             const data = res.data;
-            console.log(data,"from server --")
+            // console.log(data,"from server --")
             dispatch(seasucc(data));
         }).catch((err)=>{
             dispatch(seafail(err))
@@ -61,7 +61,7 @@ export const deletebyId = (id,title) =>{
     return(dispatch)=>{
         dispatch(delreq());
 
-        axios.get(`http://localhost:8080/post/delete/${title}/${id}`)
+        axios.get(`https://widepost-api.onrender.com/post/delete/${title}/${id}`)
         .then((res)=>{
             const result = res.data.result;
             // console.log(result," acdjklsd")

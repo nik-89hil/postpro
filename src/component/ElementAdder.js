@@ -2,7 +2,6 @@ import React from 'react'
 import './detailstyle.css'
 import { useForm, } from 'react-hook-form'
 import axios from 'axios';
-import {useDispatch} from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
 const ElementAdder = () => {
@@ -14,7 +13,7 @@ const ElementAdder = () => {
 
     const sendData = (data) => {
 
-        axios.post("http://localhost:8080/post/createpost", {
+        axios.post("https://widepost-api.onrender.com/post/createpost", {
             ...data,
             imgarr:JSON.parse(localStorage.getItem("imageupload"))
         }).then((response) =>setPostData(response.data));
