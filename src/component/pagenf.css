@@ -1,0 +1,61 @@
+
+
+.pagenotfound{
+    width:300px;
+    height: 300px;
+    padding: 1vh;
+    margin: auto;
+    margin-top: 10vh;
+}
+
+.pagenotfound img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.fotter{
+    width: 100%;
+    background-color: white;
+    color: rgb(149, 146, 146);
+    display: flex;
+    justify-content: space-between;
+    padding:2vh 0;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 10vh;
+  
+}
+
+.left-foot i{
+    font-size: 20px;
+    margin: 5px;
+}
+
+.left-foot a{
+    color:rgb(216, 110, 216);
+}
+
+.right-foot a i{
+    font-size: 35px;
+    margin-left: 2vw;
+    color: rgb(216, 110, 216);
+
+}
+
+@media screen and (max-width:768px) {
+    .fotter{
+        margin-bottom: 6vh;
+        padding-left: 8px;
+      
+    }
+
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,185 @@
+
+.login-cont{
+    width:60%;
+    height:auto;
+    border: 2px solid black;
+    margin: auto;
+    border-radius: 5px;
+    margin-top:5vh;
+    font-family: cursive;
+    color: white;
+    text-align: center;
+    transition: 0.2s linear;
+    display: flex;
+}
+.login-cont:hover{
+    border: 2px solid white;
+}
+
+.left{
+    width: 50%;
+    height: 600px;
+
+} 
+
+.left img,
+.logodiv img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.right-cont {
+    width: 50%;
+    padding: 2vh;
+}
+
+.logodiv{
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    border-radius: 100%;
+}
+
+.right-cont form {
+    width: 100%;
+}
+
+form p{
+    font-size: 19px;
+}
+
+form input{
+    font-size: 19px;
+    width: 80%;
+    padding: 5px 10px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    outline: none;
+    color: white;
+    border-radius: 5px;
+}
+
+form button{
+    padding: 5px 9px;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 5vh;
+    background-color: white;
+    border: none;
+    font-weight: 500;
+}
+
+.about-page{
+    width: 100vmin;
+    height: auto;
+    margin: auto;
+    margin-top: 5vh;
+    padding: 5vh 2vh;
+    color: white;
+    font-family: cursive;
+    background-color: transparent;
+}
+
+
+#goback{
+    border: none;
+    border-radius: 5px;
+    padding: 2vh;
+    font-size: 20px;
+}
+
+.topic{
+    background-color: transparent;
+    margin: 2vh;
+    border-radius: 5px;
+    padding: 5px 9px;
+    color: white;
+    font-size: 18px;
+    transition: .5s linear;
+    border: none;
+    border-bottom: 1px solid white;
+}
+
+.topic:hover{
+    background-image: linear-gradient(to right,rgb(236, 137, 137),rgb(157, 157, 247));
+    border: none;
+}
+
+.social-media{
+    width: 60%;
+    text-align: center;
+    margin: auto;
+}
+.social-media a{
+    color: white; 
+    transition: 0.2s linear;
+}
+.social-media a:hover{
+    color: violet;
+}
+.social-media i{
+    font-size: 30px;
+    margin: 3vh;
+}
+.business{
+    padding: 6px 2vw;
+    font-weight: 600;
+    color: black;
+    border-radius: 5px;
+    border: none;
+}
+
+
+@media screen and (max-width:768px){
+    .login-cont{
+        width: 90%;
+        height: auto;
+        border: 2px solid white;
+        padding: 3vh 5px;
+        border-radius: 5px;
+        margin-top:5vh;
+        font-family: cursive;
+        color: white;
+        text-align: center;
+        transition: 0.2s linear;
+    }
+    
+.about-page{
+    width: 90%;
+    height: auto;
+    margin-top: 5vh;
+    color: white;
+    font-family: cursive;
+    background-color: transparent;
+}
+
+.login-cont{
+    width:90%;
+    height:auto;
+    display: block;
+    padding: 0;
+    border: 2px solid black;
+}
+
+.login-cont:hover{
+    border: 2px solid black;
+}
+
+.left{
+    width: 100%;
+    padding: 0;
+    height: 150px;
+} 
+
+.right-cont {
+    width: 100%;
+    padding: 5px;
+    padding-top: 5vh;
+}
+
+
+}
+
+
