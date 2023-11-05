@@ -6,7 +6,7 @@ import "./log.css"
 
 const About = () => {
 
-  
+  const arr = ["mongodb","express","npm","html5","css3","javascript","api","node","react"]
 
 
   return (
