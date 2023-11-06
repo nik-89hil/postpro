@@ -14,7 +14,7 @@ const Logout = () => {
     }
 
     if(localStorage.getItem("user")==null){
-        window.location.href ="/posts"
+        window.location.href ="https://widepost-api.onrender.com/posts"
     }
 
     const outer = () =>{
