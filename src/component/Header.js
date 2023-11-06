@@ -27,7 +27,7 @@ const Header = () => {
           <p>
           <i className="fa-regular fa-user"></i>&nbsp;
           {
-            user.length ===0 ? <Link to={"/user/login"}>create account</Link> : user[0].email ==="unauthorised"?(<Link to={"/user/login"}>create account</Link>):(user[0].email)
+            user.length ===0 ? <Link to={"/user/login"}>create account</Link> : user[0].email ==="unauthorised"?(<Link to={"/user/login"}>create account</Link>):( <span id='username'>{user[0].email}</span> )
           }
           
           </p>

@@ -236,7 +236,12 @@
 }
 
 
+.username{
+    width: 60px;
+    height: auto;
+    overflow: hidden;
 
+}
 
 
 
