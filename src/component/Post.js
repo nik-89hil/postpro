@@ -60,7 +60,7 @@ const Post = () => {
                         {value.intro}
                         <br />
                         <br />
-                        <span className='authName'>{value.author} || {value.createdAt}</span>
+                        <span className='authName'>{value.author} <br /> {value.createdAt}</span>
                         </p>
                     </div>
                     
