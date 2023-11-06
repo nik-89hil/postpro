@@ -10,11 +10,11 @@ const Logout = () => {
     const navigate = useNavigate();
 
     const backer = () =>{
-        navigate("/posts")
+        navigate("https://widepost.onrender.com")
     }
 
     if(localStorage.getItem("user")==null){
-        window.location.href ="https://widepost.onrender.com/posts"
+        window.location.href ="https://widepost.onrender.com"
     }
 
     const outer = () =>{
