@@ -15,6 +15,7 @@ const PostDetails = () => {
   
 
   const params = useParams();
+  console.log()
   
   const id = params.id;
   localStorage.setItem("getid",id);

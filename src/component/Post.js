@@ -18,8 +18,9 @@ const Post = () => {
     
   return (
     <>
-    <Header />
     {loading?<Loading/>:null}
+    <Header />
+    
     <span style={{color:"white"}}>{err}</span>
 
     
@@ -67,8 +68,11 @@ const Post = () => {
                 )
             })
         }
-
-    <Fotter/>
+    
+    {loading?null:(
+        <Fotter/>
+    )}
+    
     </>
   )
 }

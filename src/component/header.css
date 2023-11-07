@@ -221,7 +221,6 @@
 }
 
 .authName{
-    border: 1px solid violet;
     padding: 2px 9px;
     margin-top: 2vh;
     border-radius: 5px;
@@ -231,17 +230,18 @@
 }
 
 .authName:hover{
-    border: 1px solid rgb(144, 241, 144);
     color: rgb(144, 241, 144);
 }
 
 
-.username{
-    width: 60px;
+/* #username{
+    display: block;
+    width: 70px !important;
     height: auto;
     overflow: hidden;
+    background-color: white; 
 
-}
+} */
 
 
 

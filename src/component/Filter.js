@@ -20,10 +20,11 @@ const Filter = () => {
 
   return (
     <>
-    <Header/>
     {
         loading?<Loading/>:null
     }
+    <Header/>
+    
     {
         <span style={{color:"white"}}>{err}</span>
     }

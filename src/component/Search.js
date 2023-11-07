@@ -38,8 +38,9 @@ const Search = () => {
 
     return (
         <>
-            <Header />
             {result.loading?<Loading/>:null}
+            <Header />
+           
             <div className='search-box'>
                
                 <form onSubmit={handleSubmit(search, handleErrors)}>
