@@ -263,7 +263,7 @@
     }
 
     .user-features {
-        width: auto;
+        width: 100%;
         height: auto;
         text-align: center;
         font-size: 22px;
