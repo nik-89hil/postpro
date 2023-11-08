@@ -6,6 +6,7 @@ import { useForm, } from 'react-hook-form'
 import Loading from './Loading';
 import {Link} from 'react-router-dom'
 import {searcher} from '../redux/search/action'
+import {motion} from 'framer-motion'
 
 const Search = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
@@ -41,7 +42,13 @@ const Search = () => {
             {result.loading?<Loading/>:null}
             <Header />
            
-            <div className='search-box'>
+            <motion.div className='search-box'
+             initial={{y:-200}}
+             animate={{x:0,y:10}}
+             transition={{ delay:0.3 ,duration:.4,ease:'easeInOut', type:"tween"}}
+             exit={{y:-200}}
+            
+            >
                
                 <form onSubmit={handleSubmit(search, handleErrors)}>
                     <p>
@@ -52,7 +59,7 @@ const Search = () => {
                 
                 <span style={{color:"white"}} className='search-for'>result for : {fors}</span>
                 
-            </div>
+            </motion.div>
            
            
 

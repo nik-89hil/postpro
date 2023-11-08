@@ -25,14 +25,8 @@ const Header = () => {
             <span id='search-icon'><i className="fa-solid fa-magnifying-glass"></i></span>
            </NavLink>
           </p>
-          <p>
-          <i className="fa-regular fa-user"></i>&nbsp;
-          {
-            user.length ===0 ? <Link to={"/user/login"}>create account</Link> : user[0].email ==="unauthorised"?(<Link to={"/user/login"}>create account</Link>):( <span id='username'>{user[0].email}</span> )
-          }
           
-          </p>
-          <p onClick={()=>setBox(!box)} className='button-user'>&nbsp;<i className="fa-solid fa-ellipsis" style={{color:"white"}}></i></p>
+          <p onClick={()=>setBox(!box)} className='button-user'>&nbsp;<i class="fa-solid fa-list-ul" style={{color:"white"}}></i></p>
           
       </div>
     </div>
@@ -66,7 +60,15 @@ const Header = () => {
       }
 
       <p><NavLink to={"/about"} style={{color:"white"}}><i className="fa-solid fa-circle-info"></i> About</NavLink></p>
-        </motion.div>
+      <p>
+        
+          {
+            user.length ===0 ? <Link to={"/user/login"}><i className="fa-regular fa-user" style={{color:"white"}}></i> create account</Link> : user[0].email ==="unauthorised"?(<Link to={"/user/login"}>create account</Link>):( <span id='username' style={{color:"white"}}>{user[0].email}</span> )
+          }
+          
+      </p>
+      
+      </motion.div>
       ):null
     }
 

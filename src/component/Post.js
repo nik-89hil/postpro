@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom'
 import {PostList} from '../redux/post/action.js'
 import Loading from './Loading.js'
 import Fotter from './Fotter.js'
+import {motion} from 'framer-motion';
 
 
 const Post = () => {
@@ -49,7 +50,12 @@ const Post = () => {
             post && 
             post.map((value,idx)=>{
                 return(
-                    <div className="post" key={idx}>
+                    <motion.div className="post" key={idx}
+                    initial={{y:-200}}
+                    animate={{x:0,y:10}}
+                    transition={{ delay:0.3 ,duration:.4,ease:'easeInOut', type:"tween"}}
+                    exit={{y:-200}}
+                    >
                         <p className='heading'>
                         <Link to={`/posts/${value._id}/${value.title}`}  >
                         #{value.title}
@@ -63,7 +69,7 @@ const Post = () => {
                         <br />
                         <span className='authName'>{value.author} <br /> {value.createdAt}</span>
                         </p>
-                    </div>
+                    </motion.div>
                     
                 )
             })
