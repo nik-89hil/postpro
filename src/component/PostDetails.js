@@ -33,7 +33,7 @@ const PostDetails = () => {
 
     {details === undefined ?(null):(
       <div className="post-detail">
-      <button id="back"><Link to={"/posts"}><i className="fa-solid fa-arrow-left"></i> back</Link></button>
+      <button id="back"><Link to={"/posts"}><i className="fa-solid fa-arrow-left"></i></Link></button>
       <h1 className='head-topic'> {details.title} </h1>
       <p className='author-name'>{details.author} | posted on : {details.dateofpost}</p>
       <br />

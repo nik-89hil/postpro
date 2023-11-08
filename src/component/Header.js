@@ -3,6 +3,7 @@ import './header.css'
 import {Link, NavLink, } from "react-router-dom"
 import { useSelector } from 'react-redux'
 import logo from "./logoph.jpg";
+import {motion} from 'framer-motion'
 
 
 const Header = () => {
@@ -37,7 +38,12 @@ const Header = () => {
     </div>
     {
       box?(
-        <div className='user-features'>
+        <motion.div className='user-features'
+        initial={{y:-200}}
+        animate={{x:0,y:10}}
+        transition={{ delay:0.1 ,duration:.4,ease:'easeInOut', type:"tween"}}
+        exit={{y:-200}}
+        >
      
       {
         user.length > 0 && user[0].isAdmin?(
@@ -60,7 +66,7 @@ const Header = () => {
       }
 
       <p><NavLink to={"/about"} style={{color:"white"}}><i className="fa-solid fa-circle-info"></i> About</NavLink></p>
-    </div>
+        </motion.div>
       ):null
     }
 

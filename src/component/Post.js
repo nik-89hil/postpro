@@ -52,13 +52,13 @@ const Post = () => {
                     <div className="post" key={idx}>
                         <p className='heading'>
                         <Link to={`/posts/${value._id}/${value.title}`}  >
-                        {value.title}
+                        #{value.title}
                         </Link>
                         </p>
                         <br />
                         <hr className='line'/>
                         <p className='postintro'> 
-                        {value.intro}
+                        <i class="fa-solid fa-caret-right" style={{color:"white"}}></i> {value.intro}
                         <br />
                         <br />
                         <span className='authName'>{value.author} <br /> {value.createdAt}</span>
