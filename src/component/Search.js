@@ -17,7 +17,8 @@ const Search = () => {
 
 
     const search = (data) =>{
-        setFors(data.text)
+        const str = data.text
+        setFors(str.toLowerCase())
         // console.log(fors,"search")
         
     }

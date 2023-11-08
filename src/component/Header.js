@@ -26,7 +26,7 @@ const Header = () => {
            </NavLink>
           </p>
           
-          <p onClick={()=>setBox(!box)} className='button-user'>&nbsp;<i class="fa-solid fa-list-ul" style={{color:"white"}}></i></p>
+          <p onClick={()=>setBox(!box)} className='button-user'>&nbsp;<i className="fa-solid fa-list-ul" style={{color:"white"}}></i></p>
           
       </div>
     </div>
