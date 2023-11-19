@@ -50,7 +50,8 @@ const Post = () => {
             post && 
             post.map((value,idx)=>{
                 return(
-                    <motion.div className="post" key={idx}
+                    <motion.div className="post" 
+                    key={idx}
                     initial={{y:-200}}
                     animate={{x:0,y:10}}
                     transition={{ delay:0.3 ,duration:.4,ease:'easeInOut', type:"tween"}}
