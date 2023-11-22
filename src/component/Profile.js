@@ -32,7 +32,7 @@ const Profile = () => {
                     <tr key={idx}>
                         <td><i className="fa-regular fa-circle-dot"></i> {ele.title}</td>
                         <td>{ele.author}</td>
-                        <td><Link to={`/posts/delete/${ele._id}/${ele.title}`}>
+                        <td><Link to={`https://widepost.onrender.com//posts/delete/${ele._id}/${ele.title}`}>
                         <button className='delete-btn'><i className="fa-solid fa-trash"></i></button>
                         </Link>
                         </td>

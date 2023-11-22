@@ -16,7 +16,7 @@ const Header = () => {
     <>
     <div className="header">
       <div id='webname'>
-        <Link to={"/posts"}><img  src={logo} draggable="false"/><span style={{color:"white"}}>widepost.com</span></Link>
+        <Link to={"/"}><img  src={logo} draggable="false"/><span style={{color:"white"}}>widepost.com</span></Link>
       </div>
       <div id='tagdiv'>
           <p><NavLink to={"/posts"}><i className="fa-solid fa-paperclip"></i> Posts</NavLink></p>

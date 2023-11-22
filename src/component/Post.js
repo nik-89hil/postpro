@@ -14,6 +14,7 @@ const Post = () => {
     const {post,loading,err,root} = useSelector((state) => state.post)
     useEffect(()=>{
         dispatch(PostList())
+
     },[]);
 
     
@@ -49,6 +50,7 @@ const Post = () => {
     {
             post && 
             post.map((value,idx)=>{
+                console.log(value,"___")
                 return(
                     <motion.div className="post" 
                     key={idx}
@@ -57,15 +59,20 @@ const Post = () => {
                     transition={{ delay:0.3 ,duration:.4,ease:'easeInOut', type:"tween"}}
                     exit={{y:-200}}
                     >
-                        <p className='heading'>
+
+                       <p className='heading'>
                         <Link to={`/posts/${value._id}/${value.title}`}  >
                         #{value.title}
                         </Link>
-                        </p>
+                        </p> 
+                        <br />
+                        <div className="imager">
+                            <img src={`https://widepost-api.onrender.com/getimage/${value.imgarr[0]}`} alt="image not found"  />
+                        </div>
                         <br />
                         <hr className='line'/>
                         <p className='postintro'> 
-                        <i class="fa-solid fa-caret-right" style={{color:"white"}}></i> {value.intro}
+                        <i className="fa-solid fa-caret-right" style={{color:"black"}}></i> {value.intro}
                         <br />
                         <br />
                         <span className='authName'>{value.author} <br /> {value.createdAt}</span>
