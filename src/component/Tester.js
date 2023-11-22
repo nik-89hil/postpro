@@ -15,7 +15,7 @@ const Tester = () => {
       formdata.append("files",file)
     }
 
-    const result = await axios.post("https://widepost-api.onrender.com/post/images",formdata);
+    const result = await axios.post("http://localhost:8080/post/images",formdata);
     console.log(result.data.filename[0],"{{{ server }}}")
     const arr = result.data.filename.map((e)=>{
       return e.filename

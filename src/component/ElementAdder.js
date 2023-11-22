@@ -13,7 +13,7 @@ const ElementAdder = () => {
 
     const sendData = (data) => {
 
-        axios.post("https://widepost-api.onrender.com/post/createpost", {
+        axios.post("http://localhost:8080/post/createpost", {
             ...data,
             imgarr:JSON.parse(localStorage.getItem("imageupload"))
         }).then((response) =>setPostData(response.data));
@@ -42,7 +42,7 @@ const ElementAdder = () => {
             </span>
 
 
-        <h1 style={{color:"white"}}>{
+        <h1 style={{color:"black"}}>{
             postdata &&
             postdata.success?"send successfully": null
             }

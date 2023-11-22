@@ -185,26 +185,26 @@
     border: none;
     font-size: larger;
     transition: .3s ease-in-out;
-    border-right: 2px solid yellow;
-    border-left: 2px solid yellow;
+    /* border-right: 2px solid yellow;
+    border-left: 2px solid yellow; */
     
 }
 
 
 .post .heading a{
     color: green;
-    text-decoration: underline yellow;
+    text-decoration: underline rgb(135, 235, 135);
     font-weight: 600;
     font-size: 20px;
     
 }
 
-.post .heading:hover {
+/* .post .heading:hover {
     border: none;
     border-left: none;
     border-right: none;
     box-shadow: 0px 0px 50px rgb(244, 244, 53);
-}
+} */
 
 
 
