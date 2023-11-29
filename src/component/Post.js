@@ -52,6 +52,7 @@ const Post = () => {
             post.map((value,idx)=>{
                 console.log(value,"___")
                 return(
+                    <Link to={`/posts/${value._id}/${value.title}`}>
                     <motion.div className="post" 
                     key={idx}
                     initial={{y:-200}}
@@ -78,6 +79,8 @@ const Post = () => {
                         <span className='authName'>{value.author} <br /> {value.createdAt}</span>
                         </p>
                     </motion.div>
+                    </Link>
+                    
                     
                 )
             })
