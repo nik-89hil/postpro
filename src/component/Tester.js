@@ -16,11 +16,11 @@ const Tester = () => {
     }
 
     const result = await axios.post("http://localhost:8080/post/images",formdata);
-    console.log(result.data.filename[0],"{{{ server }}}")
+    // console.log(result.data.filename[0],"{{{ server }}}")
     const arr = result.data.filename.map((e)=>{
       return e.filename
     })
-    console.log(arr)
+    // console.log(arr)
 
     localStorage.setItem("imageupload",JSON.stringify(arr));
 
@@ -35,11 +35,11 @@ const Tester = () => {
 
   return (
     <>
-      <div style={{color:"white"}}> 
+      <div style={{color:"black"}}> 
         <h1>Select your multiple files</h1> 
         <input type="file" multiple onChange={(event)=>{
           const filelist = event.target.files;
-          console.log(filelist,"__input file");
+          // console.log(filelist,"__input file");
           postMultiFile(filelist);
 
         }} />

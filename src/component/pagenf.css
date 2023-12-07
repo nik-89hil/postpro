@@ -16,7 +16,7 @@
 
 .fotter{
     width: 100%;
-    background-color: white;
+    border-top: 2px solid black;
     color: rgb(149, 146, 146);
     display: flex;
     justify-content: space-between;
@@ -24,6 +24,7 @@
     align-items: center;
     flex-wrap: wrap;
     margin-top: 10vh;
+    background-color: white;
   
 }
 

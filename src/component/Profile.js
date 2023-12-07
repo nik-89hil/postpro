@@ -16,7 +16,6 @@ const Profile = () => {
 
   return (
     <>
-    <Header/>
 
     <div className="your-post-cont">
         <table>

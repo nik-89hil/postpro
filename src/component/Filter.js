@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react'
-import Header from './Header'
 import { useParams } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux';
 import {searcher} from "../redux/search/action"
@@ -23,14 +22,13 @@ const Filter = () => {
     {
         loading?<Loading/>:null
     }
-    <Header/>
     
     {
-        <span style={{color:"white"}}>{err}</span>
+        <span style={{color:"black"}}>{err}</span>
     }
     <div className="filter">
         {
-            <h2>{params.relatedtopic}</h2>
+            <h2>Articles Related : {params.relatedtopic}</h2>
         }
     {
         search === undefined?(
@@ -42,14 +40,9 @@ const Filter = () => {
                     <p key={idx} className='filter-link'><Link to={`/posts/${d._id}/${d.title}`}><i className="fa-solid fa-link"></i> {d.title}</Link></p> 
                 )
             })
-
-
         )
     }
     </div>
-
-
-      
     </>
   )
 }

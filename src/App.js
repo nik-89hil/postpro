@@ -13,11 +13,13 @@ import Search from './component/Search';
 import {BrowserRouter,Routes,Route} from "react-router-dom";
 import Pagenf from './component/Pagenf';
 import Tester from './component/Tester';
+import Header from './component/Header';
 
 function App() {
   return (
     <>
     <BrowserRouter>
+    <Header/>
      <Routes>
      <Route path="/" element={<Post/>}/>  
      <Route path="/user/login" element={<Login/>}/>

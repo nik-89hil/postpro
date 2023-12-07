@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 import './detailstyle.css'
 import { Link, useParams } from 'react-router-dom'
-import Header from './Header';
 import { useDispatch, useSelector } from 'react-redux';
 import Fotter from './Fotter'
 import {detail} from '../redux/post/action'
@@ -15,7 +14,6 @@ const PostDetails = () => {
   
 
   const params = useParams();
-  console.log()
   
   const id = params.id;
   localStorage.setItem("getid",id);
@@ -29,7 +27,6 @@ const PostDetails = () => {
 
   return (
     <>
-    <Header/>
 
     {details === undefined ?(null):(
       <div className="post-detail">
@@ -41,7 +38,7 @@ const PostDetails = () => {
         <Slider className="slides" images={details.imgarr}/>
       </p>
       <br/>
-      <p className='introduction'> <span className='heading'>Introduction</span> <br /> <br /> {details.intro}</p>
+      <p className='introduction'> {details.intro}</p>
       <br/>
       <p className='summary'>{details.summary}</p>
       <br/>
@@ -52,7 +49,7 @@ const PostDetails = () => {
       { 
         details&&
         details.tags.map((ele,id)=>{
-          return <button className='tags-but' key={id}><Link to={`/posts/${ele}`}>{ele}</Link></button>
+          return <button className='tags-but' key={id}><Link to={`/posts/${ele}`}>#{ele}</Link></button>
         })
       } 
 

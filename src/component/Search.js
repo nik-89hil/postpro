@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react'
-import Header from './Header'
 import './header.css'
 import { useDispatch, useSelector } from 'react-redux';
 import { useForm, } from 'react-hook-form'
@@ -19,15 +18,11 @@ const Search = () => {
     const search = (data) =>{
         const str = data.text
         setFors(str.toLowerCase())
-        // console.log(fors,"search")
-        
     }
 
 
     useEffect(()=>{
-        // dispatch(account_creater(detail));
         dispatch(searcher(fors))
-        
     },[fors])
 
     const handleErrors = (errors) => { };
@@ -41,7 +36,7 @@ const Search = () => {
     return (
         <>
             {result.loading?<Loading/>:null}
-            <Header />
+
            
             <motion.div className='search-box'
              initial={{y:-200}}
@@ -58,7 +53,7 @@ const Search = () => {
                     </p>
                 </form>
                 
-                <span style={{color:"white"}} className='search-for'>result for : {fors}</span>
+                <span className='search-for'>Result for : {fors}</span>
                 
             </motion.div>
            
@@ -72,7 +67,7 @@ const Search = () => {
                 result.search.data &&
                 result.search.data.map((d,idx)=>{
                     return (
-                        <span key={idx} style={{color:"white"}}><Link to={`/posts/${d._id}/${d.title}`}><i className="fa-solid fa-link"></i> {d.title}</Link></span>
+                        <span key={idx}><Link to={`/posts/${d._id}/${d.title}`}><i className="fa-solid fa-link"></i> {d.title}</Link></span>
                     )
                 })
 

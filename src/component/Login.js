@@ -10,6 +10,7 @@ import logimg from './loginimg.jpg';
 
 
 const Login = () => {
+    const [login,setLogin] = React.useState(true);
     const { register, handleSubmit, formState: { errors } } = useForm();
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -23,15 +24,12 @@ const Login = () => {
 
 
     const setuser = (data) =>{
-        // console.log(data,"---")
         dispatch(accountholder(data))
-
     }
 
-    // console.log(user,"-- state --")
-
+    
     if(user.length >0){
-            navigate("/posts")
+        navigate("/posts")
     }
         
    
@@ -48,23 +46,30 @@ const Login = () => {
             <img src={logimg} alt='logo-image' draggable="false"  />
         </div>
         <div className="right-cont">
-            <p className="logodiv">
-                <img src={logo} alt="logo" draggable="false" />
-            </p>
-            <p>Contain basic and advance level web related post</p>
+            <h1>
+               {login?"Login":"Register"}
+            </h1>
+            <br />
+            <h2>Widepost.com</h2>
+            <p>Articles related web tools and technologies with code Image. start your journey now.</p>
             {err}
-            <h2>Welcome,</h2>
-            {loading? <span style={{color:"white"}}>password mismatch</span> :null}
+            <h4>Welcome,</h4>
+            <br />
+            {loading? <span style={{color:"black"}}>password mismatch</span> :null}
             <form onSubmit={handleSubmit(setuser, handleErrors)}>
-                    <p>useremail</p>
+                    <label htmlFor='email'>useremail</label><br />
                     <span style={{color:"red"}}>{errors?.email && errors?.email.message}</span>
                     <input type="email" name='email' placeholder='abc@gmail.com' {...register('email', registerOptions.email)}/>
-                    <p>password</p>
+                    <br />
+                    <label htmlFor='password'>password</label><br />
                     <span style={{color:"red"}}>{errors?.password && errors?.password.message}</span>
                     <input type="password" name='password' placeholder='*******' {...register('password', registerOptions.password)} />
                     <br />
-                    <button> signin / singup </button>
+                    <button>{login?"Login":"Create Account"}</button>
             </form>
+            <button className='account' onClick={()=>setLogin(!login)}>
+                {login?"New user?":"Already have an account? "}
+            </button>
             <br />
         </div>
     </div>

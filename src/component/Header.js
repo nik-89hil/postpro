@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux'
 import logo from "./logoph.jpg";
 import {motion} from 'framer-motion'
 
-
+ 
 const Header = () => {
   const [box,setBox] = React.useState(false);
   const {user} = useSelector(state=>state.user);
@@ -16,17 +16,23 @@ const Header = () => {
     <>
     <div className="header">
       <div id='webname'>
-        <Link to={"/"}><img  src={logo} draggable="false"/><span style={{color:"white"}}>widepost.com</span></Link>
+        <h4>widepost.com</h4>
+        {/* <Link to={"/"}><img  src={logo} draggable="false"/><span style={{color:"white"}}>widepost.com</span></Link> */}
       </div>
       <div id='tagdiv'>
           <p><NavLink to={"/posts"}><i className="fa-solid fa-paperclip"></i> Posts</NavLink></p>
           <p>
             <NavLink to={"/search"}>
-            <span id='search-icon'><i className="fa-solid fa-magnifying-glass"></i></span>
-           </NavLink>
+            <span id='search-icon'><i className="fa-solid fa-magnifying-glass"></i> search</span>
+             </NavLink>
+          </p>
+          <p id='username'>
+          {
+            user.length ===0 ? <Link to={"/user/login"}><i className="fa-regular fa-user"></i> Login </Link> : user[0].email ==="unauthorised"?(<Link to={"/user/login"}>create account</Link>):( <span >{user[0].email}</span> )
+          }
           </p>
           
-          <p onClick={()=>setBox(!box)} className='button-user'>&nbsp;<i className="fa-solid fa-list-ul" style={{color:"white"}}></i></p>
+          <p onClick={()=>setBox(!box)} className='button-user'>&nbsp;<i className="fa-solid fa-list-ul"></i> More</p>
           
       </div>
     </div>
@@ -59,12 +65,10 @@ const Header = () => {
         user.length >0 && user[0].islogin?<p title='logout'><Link to={`/user/logout/${user[0]._id}`}><i className="fa-solid fa-arrow-right-from-bracket"></i> logout</Link></p>:null
       }
 
-      <p><NavLink to={"/about"} style={{color:"white"}}><i className="fa-solid fa-circle-info"></i> About</NavLink></p>
+      <p><NavLink to={"/about"}><i className="fa-solid fa-circle-info"></i> About</NavLink></p>
       <p>
         
-          {
-            user.length ===0 ? <Link to={"/user/login"}><i className="fa-regular fa-user" style={{color:"white"}}></i> create account</Link> : user[0].email ==="unauthorised"?(<Link to={"/user/login"}>create account</Link>):( <span id='username' style={{color:"white"}}>{user[0].email}</span> )
-          }
+          
           
       </p>
       

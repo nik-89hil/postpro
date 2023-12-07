@@ -20,10 +20,12 @@ const About = () => {
         using effective and simple method to comprehend easily. <br />
         website contains different type of tools and technology post..
         <br />
+        Thank You !!
+        <br/>
         Be learner , Be creater 
     </p>
     <br />
-    <button className="business">get your website dm</button>
+    <button className="business"><a href='mailto:nikhilkumar19072002@gmail.com'>get your website dm</a></button>
     <br />
     <h2>Post based on : </h2>
     <p className='corosal'>

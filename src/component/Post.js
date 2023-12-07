@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react'
-import Header from './Header.js'
 import { useDispatch,useSelector} from "react-redux"
 import './header.css'
 import { Link } from 'react-router-dom'
@@ -21,9 +20,8 @@ const Post = () => {
   return (
     <>
     {loading?<Loading/>:null}
-    <Header />
     
-    <span style={{color:"white"}}>{err}</span>
+    <span style={{color:"black"}}>{err}</span>
 
     
 
@@ -37,7 +35,7 @@ const Post = () => {
             root === undefined?null:
             root.map((e,idx)=>{
                 return(
-                    <button><Link to={`/posts/${e}`} key={idx} >{e}</Link></button>
+                    <Link to={`/posts/${e}`} key={idx} >{e}</Link>
                 )
             })
         }
@@ -50,7 +48,6 @@ const Post = () => {
     {
             post && 
             post.map((value,idx)=>{
-                console.log(value,"___")
                 return(
 
                     <motion.div className="post" 
@@ -61,7 +58,7 @@ const Post = () => {
                     exit={{y:-200}}
                     >
 
-                       <p className='heading'>
+                       <p className='headingpost'>
                         <Link to={`/posts/${value._id}/${value.title}`}  >
                         #{value.title}
                         </Link>
@@ -71,12 +68,11 @@ const Post = () => {
                             <img src={`https://widepost-api.onrender.com/getimage/${value.imgarr[0]}`} alt="image not found"  />
                         </div>
                         <br />
-                        <hr className='line'/>
                         <p className='postintro'> 
-                        <i className="fa-solid fa-caret-right" style={{color:"black"}}></i> {value.intro}
+                         {value.intro}
                         <br />
                         <br />
-                        <span className='authName'>{value.author} <br /> {value.createdAt}</span>
+                        <span className='authName'><i className="fa-solid fa-caret-right" style={{color:"black"}}></i> {value.author} - posted on : {value.createdAt}</span>
                         </p>
                     </motion.div>
                     
