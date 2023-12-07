@@ -161,7 +161,7 @@
     margin: auto;
     overflow: hidden;
     position: fixed;
-    top: 13vh;
+    top: 15vh;
     z-index: +60;
     opacity: 0.6;
     transition: 0.5s ease-in-out;
@@ -297,6 +297,17 @@
         width: 90%;
         margin-block:15vh;
      
+    }
+
+    .filter-container{
+        width: 150px;
+        height: 60px;
+    }
+
+    .filter-container a{
+        display: block;
+        color: black;
+        margin: 1vh;
     }
 
   

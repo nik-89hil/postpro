@@ -30,7 +30,6 @@ const Post = () => {
        <p>
        Total : {post === undefined ? 0:post.length} posts <i className="fa-solid fa-filter"></i>
        </p>
-       <br />
         {
             root === undefined?null:
             root.map((e,idx)=>{
@@ -39,7 +38,6 @@ const Post = () => {
                 )
             })
         }
-        <br />
         <br />
     </div>
         

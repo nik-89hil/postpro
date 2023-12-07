@@ -1,28 +1,27 @@
-
-.login-cont{
-    width:60%;
-    height:auto;
+.login-cont {
+    width: 60%;
+    height: auto;
     box-shadow: 0px 0px 20px grey;
     margin: auto;
     border-radius: 5px;
-    margin-top:5vh;
+    margin-top: 5vh;
     color: black;
     transition: 0.2s linear;
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
 
 }
 
 
-.left{
+.left {
     width: 40%;
     height: 500px;
 
-} 
+}
 
-.left img{
+.left img {
     object-fit: cover;
     width: 100%;
     height: 100%;
@@ -39,11 +38,11 @@
     width: 100%;
 }
 
-form p{
+form p {
     font-size: 19px;
 }
 
-form input{
+form input {
     font-size: 19px;
     width: 80%;
     padding: 5px 10px;
@@ -55,7 +54,7 @@ form input{
     border-radius: 5px;
 }
 
-form button{
+form button {
     padding: 5px 9px;
     font-size: 16px;
     border-radius: 5px;
@@ -64,7 +63,7 @@ form button{
     font-weight: 500;
 }
 
-.account{
+.account {
     padding: 5px 9px;
     border-radius: 5px;
 }
@@ -81,7 +80,7 @@ form button{
 
 /* about page designing */
 
-.about-page{
+.about-page {
     width: 100vmin;
     height: auto;
     margin: auto;
@@ -92,14 +91,14 @@ form button{
 }
 
 
-#goback{
+#goback {
     border: none;
     border-radius: 5px;
     padding: 2vh;
     font-size: 20px;
 }
 
-.topic{
+.topic {
     background-color: transparent;
     margin: 2vh;
     border-radius: 5px;
@@ -110,87 +109,86 @@ form button{
     border: none;
 }
 
-.topic:hover{
-    background-image: linear-gradient(to right,rgb(236, 137, 137),rgb(157, 157, 247));
+.topic:hover {
+    background-image: linear-gradient(to right, rgb(236, 137, 137), rgb(157, 157, 247));
     border: none;
 }
 
-.social-media{
+.social-media {
     width: 60%;
     text-align: center;
     margin: auto;
 }
-.social-media a{
-    color: black; 
+
+.social-media a {
+    color: black;
     transition: 0.2s linear;
 }
-.social-media a:hover{
+
+.social-media a:hover {
     color: violet;
 }
-.social-media i{
+
+.social-media i {
     font-size: 30px;
     margin: 3vh;
 }
-.business{
+
+.business {
     padding: 6px 2vw;
     border-radius: 5px;
     border: 1px solid black;
 }
 
-.business a{
+.business a {
     color: black;
     font-weight: 600;
 }
 
 
-@media screen and (max-width:768px){
-    .login-cont{
+@media screen and (max-width:768px) {
+    .login-cont {
+        width: 90%;
+        color: black;
+        transition: 0.2s linear;
+        display: block;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .right-cont {
+        width: 100%;
+        padding: 2vh;
+    }
+
+    form input{
+        width: 100%;
+    }
+
+    .about-page {
         width: 90%;
         height: auto;
-        border: 2px solid white;
-        padding: 3vh 5px;
-        border-radius: 5px;
-        margin-top:5vh;
-        font-family: cursive;
-        color: white;
-        text-align: center;
-        transition: 0.2s linear;
+        margin-block: 5vh;
+        color: black;
+        background-color: white;
+        text-align: justify;
     }
-    
-.about-page{
-    width: 90%;
-    height: auto;
-    margin-top: 5vh;
-    color: white;
-    font-family: cursive;
-    background-color: transparent;
-}
 
-.login-cont{
-    width:90%;
-    height:auto;
-    display: block;
-    padding: 0;
-    border: 2px solid black;
-}
+    .topic {
+        border: 2px solid black;
+        border-radius: 5px;
+    }
 
-.login-cont:hover{
-    border: 2px solid black;
-}
 
-.left{
-    width: 100%;
-    padding: 0;
-    height: 150px;
-} 
 
-.right-cont {
-    width: 100%;
-    padding: 5px;
-    padding-top: 5vh;
-}
+
+    .left {
+        width: 100%;
+        padding: 0;
+        height: 150px;
+    }
+
+   
 
 
 }
-
-

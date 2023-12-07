@@ -51,6 +51,8 @@
 .head-topic {
     font-size: x-large;
     color: yellow;
+    font-weight: 600;
+    text-decoration: underline black;
 }
 
 
@@ -186,19 +188,17 @@
         padding: 1vh;
         margin: auto;
         margin-top: 5vh;
-        color: white;
+        color: black;
         text-align: start;
-        /* background-color: blue; */
-        /* background-color: grey; */
+       
     }
 
     .head-topic {
-        font-size: 25px;
+        font-size: x-large;
     }
 
     .image-slider {
         text-align: center;
-        /* max-width: 400px; */
         width: 95%;
         margin: 0 auto;
     }
@@ -206,7 +206,7 @@
     .introduction,
     .summary,
     .conclusion {
-        color: white;
+        color: black;
         text-align: justify;
         font-size: 19px;
         word-spacing: 0%;
